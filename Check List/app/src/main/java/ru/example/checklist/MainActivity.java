@@ -60,19 +60,21 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
-    final String LOG_TAG = "myLogs";
-
+    
     static final String TAG = "myLogs";
-    //static int PAGE_COUNT ;
-    static int PAGE_COUNT;
+       static int PAGE_COUNT;
 
     private static final int LAYOUT = R.layout.activity_main;
 
+		
+		/*
     private Toolbar toolbar;
     private DrawerLayout drawerLayout;
     private ViewPager viewPager;
 
     private TabsFragmentAdapter adapter;
+
+*/
 
 
     @Override
@@ -81,6 +83,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(LAYOUT);
 
+				
+		/*		
         initToolbar();
         initNavigationView();
         initTabs();
@@ -89,11 +93,11 @@ public class MainActivity extends AppCompatActivity {
 				Intent intent = new Intent(MainActivity.this, ActivityDark.class);
         startActivity(intent);
 				
-				
+				*/
 				
     }
 
-
+/*
     private void initToolbar() {
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setTitle(R.string.app_name);
@@ -119,6 +123,8 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
+		
+		
 
     private void initNavigationView() {
         drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -145,13 +151,18 @@ public class MainActivity extends AppCompatActivity {
 
         viewPager.setCurrentItem(Constants.TAB_TWO);
     }
-
+*/
     public void onStartBasicActivity(View view) {
         Intent intent = new Intent(MainActivity.this, ActivityLight.class);
         startActivity(intent);
 
     }
 
+		public void onStartDarkActivity(View view) {
+        Intent intent = new Intent(MainActivity.this, ActivityDark.class);
+        startActivity(intent);
+
+    }
 		
 		/*
     private class RemindMeTask extends AsyncTask<Void, Void, RemindDTO> {
